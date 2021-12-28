@@ -1,0 +1,107 @@
+*{
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0; }
+
+
+html {
+    height: 100%; }
+
+body {
+    font-family: "Public Sans", sans-serif;
+    color: aliceblue;
+    font-size: 20px;
+    min-height: 100%; }
+
+.grid-container > * {
+    box-shadow: -1px 1px 7px 0px burlywood;
+    border-radius: 4px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+
+.header {
+    background-color: rgb(99, 99, 180);
+    grid-area: header; }
+
+.menu1 {
+    background: rgb(125, 125, 160);
+    grid-area: menu1; }
+
+.nav1 {
+    background: rgb(166, 192, 142);
+    grid-area: nav1; }
+
+.nav2 {
+    background: rgb(194, 182, 158);
+    grid-area: nav2; }
+
+.cuerpo {
+    background: rgb(160, 147, 120);
+    grid-area: cuerpo; }
+
+.banner {
+    background: rgb(79, 79, 129);
+    grid-area: banner; }
+
+.footer {
+    background: rgb(179, 194, 183);
+    grid-area: footer; }
+
+.grid-container {
+    display: grid;
+    gap: 10px; 
+    grid-template-areas: 
+    "header"
+    "menu1"
+    "nav1"
+    "nav2"
+    "cuerpo"
+    "banner"
+    "footer"
+    ;
+}
+
+/*  MOVIL - Definimos 1 columna */  
+@media (min-width: 380px) 
+{
+    .grid-container {
+        grid-template-areas:
+        "header" 
+        "menu1"
+        "nav1"
+        "nav2"
+        "cuerpo"
+        "banner"
+        "footer"
+            }
+}
+
+/*  TABLET - Definimos 2 columnas */  
+@media (min-width: 600px) 
+{
+    .grid-container {
+        grid-template-areas:
+        "header header"
+        "menu1  menu1 "
+        "nav1   nav1"
+        "nav2   cuerpo"
+        "banner banner"
+        "footer footer"
+        }
+}
+
+/*  ORDENADOR - Definimos 3 columnas */  
+@media (min-width: 1024px) 
+{
+    .grid-container {
+        grid-template-areas:
+        "header header header"
+        "menu1  menu1  menu1"
+        "nav1   nav1   banner"
+        "nav2   cuerpo banner"
+        "footer footer footer"
+        }
+}
