@@ -1,0 +1,16 @@
+@media print  { 
+    body { 
+        font-size: 11pt; 
+        color: rgb(31, 55, 194);
+        background-image: none;
+        background-color: tomato;
+    } 
+
+    header, footer, nav, aside {
+        display: none;
+    }
+
+    ul, img, table {
+        page-break-inside: avoid;
+    }
+}

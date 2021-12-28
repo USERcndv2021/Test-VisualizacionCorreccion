@@ -1,0 +1,361 @@
+*{  box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+html { 
+    height: 100%; }
+
+body{ min-height: 100%; 
+    /* Tipografía Heebo del repositorio Google Fonts. Cambio realizado en el footer de la página*/
+    font-family: 'Heebo'; }
+
+@font-face {font-family: "sans";
+    src: url("assets/css/sans.ttf");}
+
+.sans {font-family: "sans"; color: white;}
+
+img:not([alt]) { 
+    border: 3px solid red; }
+
+/* Utilizamos el pseudo-elemento after para que muestre la imagen del pdf en la página de textil */
+.pdf::after {
+    content: url("../imagenes/pdf.png");
+}
+
+/*Estilos de los h1, h2,h3, h4*/
+h1{color: #ffff; font-size: 2em; font-family:serif;}
+h2{font-family:sans-serif ;}
+h3{font-family: sans-serif ;}
+h4{color:#ffff;}
+
+/*Estilo del encabezado*/
+header{
+    background-color: #4e4c4c;
+    width: 100%;
+    height: 200px;
+    border:0px;
+    grid-area: header; }
+
+/*Estilos del menu de navegación*/
+nav{
+    background:#ffff99;
+    width: 100%;
+    height: 70px;
+    border: 0px;
+    grid-area: nav; }
+
+    .dropdownmenu ul, .dropdownmenu li {
+        margin: 0;
+        padding: 0; }
+
+    .dropdownmenu ul {
+        list-style: none;
+        width: 100%; }
+
+    .dropdownmenu li {
+        float: left;
+        position: relative;
+        width:auto; }
+
+    .dropdownmenu a {
+        color: black;
+        display: block;
+        font-family: sans-serif;
+        padding: 10px 25px;
+        text-decoration: none;
+        -webkit-transition: all 1s linear;
+        -moz-transition: all 1s linear;
+        -ms-transition: all 1s linear;
+        -o-transition: all 1s linear;
+        transition: all 1s linear; }
+
+    .dropdownmenu li:hover a {
+        background: #ffff;  
+        transition: background-color 1s linear; 
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+
+    /* >> Etiqueta submenu << */
+    #submenu {
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 35px;
+        visibility: hidden;
+        z-index: 1;}
+
+    li:hover ul#submenu {
+        opacity: 1;
+        top: 40px;
+        visibility: visible;}
+
+    #submenu li {
+        float: none;
+        width: 100%;}
+
+    #submenu a:hover {
+        background: #ffff99;}
+
+    #submenu a {
+        background-color:#ffff;}
+
+    /* >> Etiqueta submenu2 << */
+    #submenu2 {
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 35px;
+        visibility: hidden;
+        z-index: 1;}
+
+    li:hover ul#submenu2 {
+        opacity: 1;
+        top: 40px;
+        visibility: visible;}
+
+    #submenu2 li {
+        float: none;
+        width: 100%;}
+
+    #submenu2 a:hover {
+        background: #ffff99;}
+
+    #submenu2 a {
+        background-color:#ffff;}
+
+
+    /* >> Etiqueta submenu3 << */
+    #submenu3 {
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 35px;
+        visibility: hidden;
+        z-index: 1;}
+
+    li:hover ul#submenu3 {
+        opacity: 1;
+        top: 40px;
+        visibility: visible;}
+
+    #submenu3 li {
+        float: none;
+        width: 100%;}
+
+    #submenu3 a:hover {
+        background: #ffff99;}
+
+    #submenu3 a {
+        background-color:#ffff;}
+
+    /* >> Etiqueta submenu4 << */
+    #submenu4 {
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 35px;
+        visibility: hidden;
+        z-index: 1;}
+
+    a.one:visited {color:#ff0000;}
+
+    li:hover ul#submenu4 {
+        opacity: 1;
+        top: 40px;
+        visibility: visible;}
+
+    #submenu4 li {
+        float: none;
+        width: 100%;}
+
+    #submenu4 a:hover {
+        background: #ffff99;}
+
+    #submenu4 a {
+        background-color:#ffff;}
+    /*c>> Fin de modificación de submenús  << */
+
+/*Estilo de section/contenido*/
+section{
+    background-image: url("assets/imagenes/contenido.jpg");
+    opacity: 0.45;
+    grid-area: section; }
+
+    /*Estilo de section/contenido*/
+    .article{
+        grid-area: article; }
+
+/*Estilos del aside*/   
+aside{
+    background-color:#9c9c9c; 
+    color: rgb(33, 59, 202);
+    width: 100%;
+    height: 100px;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    grid-area: aside; }
+
+    aside a {
+        color: yellow;
+        font-weight: 700;
+    /*    display: block; */
+        font-family: Arial;
+        font-size: 1em;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;}
+
+    .detalles a:hover {
+        background-color: #004E61;} /*#30a6e6*/
+
+/*Estilos del formulario*/
+form {
+    display: inline-block;
+    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height:auto;
+    border: 0px ;
+    background-color: #004E61; /*#0e90ad*/
+    font-family: Arial ;
+    color: #ffff; }
+
+    form input{
+        width: 73%;
+        height: 25px;
+        margin: 0.5rem;
+        background: rgb(249, 250, 251);}
+
+    form button{
+        padding: 0.5em 1em;
+        background: rgb(249, 250, 251);
+        font-family: Arial;}
+
+    fieldset{
+        width: 30%;
+        border: 0px solid;}
+
+    textarea{
+        background: rgb(249, 250, 251);}
+
+/*Estilos de la tabla*/
+section table{
+    font-family: Arial;
+    color:#000;
+    height: 600px;
+    width: 100%;
+    border-collapse: collapse; 
+    border-color: black;
+    text-align: center;}
+    .estilos th {
+        font-size: 1em;
+        border: 3px solid black;
+        padding: 4px 7px 2px 7px;
+        margin: 0;}
+    th:first-child{
+        color: rgb(20, 43, 255);}
+
+    tr:nth-child(odd){
+        background-color: rgb(207, 211, 0);}
+
+    tr:nth-child(even){
+        background-color: rgb(0, 211, 35);}
+
+    .titulo{
+        font-size: 1em;
+        color:#2E2E2E;   /*rgb(255, 0, 76)*/
+        font-weight: 700;
+        margin: 0;}
+
+/*Estilos de footer*/
+footer{
+    background-image: url("assets/imagenes/twit.jpg");
+    border: 3px solid red;
+    background-image: url("assets/imagenes/face.jpg");
+    border: 3px solid red;
+    background-image: url("assets/imagenes/whatss.jpg"); 
+    border: 3px solid red;
+    background-color: #000;
+    color: rgb(201, 189, 189);
+    width: 100%;
+    height: auto;
+    border: 0px;
+    align-items: flex-start;
+    margin: 0;
+    grid-area: footer; }  
+
+    footer a{
+        color: #ffff;
+        text-decoration: none;}
+
+    footer a:active{
+        background-color: rgb(20, 43, 255); }     
+    
+    footer ul{
+        list-style: none;
+        text-decoration: none;
+        position: static;
+        width:auto; }       
+    
+    /*Estilo de ubicación*/
+    .ubicacion img {
+        width: 100%;
+        height: auto; } 
+
+    /*Estilo icono WhatsApp */
+    a.icono{
+        position: absolute;
+        right: 3%; }
+
+/*Diseño responsive con media queries*/
+.grid-container > * {
+    box-shadow: -1px 1px 7px 0px burlywood;
+    border-radius: 4px; 
+    padding: 5px; 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center; }
+
+.grid-container {
+    grid-template-areas: 
+    "nav"
+    "section"
+    "article"
+    "aside" ; }
+
+/*  MOVIL  */  
+@media (min-width: 380px) {
+    .grid-container {
+        grid-template-areas:
+        "nav"
+        "section"
+        "article"
+        "aside" }
+}
+
+/*  TABLET  */  
+@media (min-width: 600px) {
+    .grid-container {
+        grid-template-areas:
+        "nav"
+        "section"
+        "article"
+        "aside" }
+}
+
+/*  ORDENADOR  */  
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-areas:
+        "nav"
+        "section"
+        "article"
+        "aside" }
+}
